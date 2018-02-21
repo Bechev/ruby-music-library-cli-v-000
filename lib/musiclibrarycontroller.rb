@@ -51,7 +51,7 @@ attr_accessor :path, :imported_music
     puts "Please enter the name of an artist:"
     artist = gets
     song_list_by_artist = Song.all.sort_by!{|song| song.name}
-    binding.pry
+    #binding.pry
     count = 1
     song_list_by_artist.each do |song|
       if song.artist.name == artist
