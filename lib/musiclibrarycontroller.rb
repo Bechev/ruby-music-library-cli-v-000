@@ -26,7 +26,7 @@ attr_accessor :path, :imported_music
   end
 
   def list_songs
-    test = Song.all.collect{|song| song.name}
+    test = Song.all.collect{|song| song}
     puts test
     #test.sort_by{|song| puts "#{song}"}
   end
