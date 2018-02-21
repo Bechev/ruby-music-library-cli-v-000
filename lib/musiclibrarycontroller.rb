@@ -61,4 +61,18 @@ attr_accessor :path, :imported_music
     end
   end
 
+  def list_songs_by_genre
+    puts "Please enter the name of an genre:"
+    genre = gets
+    song_list_by_genre = Song.all.sort_by!{|song| song.name}
+    #binding.pry
+    count = 1
+    song_list_by_genre.each do |song|
+      if song.genre.name == genre
+        puts "#{count}. #{genre.name}"
+        count += 1
+      end
+    end
+  end
+
 end
