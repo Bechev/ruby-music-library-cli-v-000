@@ -27,7 +27,7 @@ attr_accessor :path, :imported_music
 
   def list_songs
 
-    Song.all.sort_by!{|song| song.name.split(" - ")[1]}.each.with_index(1) do |song|
+    Song.all.sort_by!{|song| song.name.split(" - ")[1]}.each_with_index {do |song|
       puts"#{index }. #{song.artist} - #{song.name} - song.genre"}
     end
     #@imported_music.sort_by!{|song| song.split(" - ")[1]}
