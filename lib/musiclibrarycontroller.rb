@@ -6,7 +6,7 @@ attr_accessor :path, :imported_music
     #@path = path
     music_importer = MusicImporter.new(path)
     @imported_music = music_importer.import
-    #binding.pry
+    binding.pry
   end
 
   def call
