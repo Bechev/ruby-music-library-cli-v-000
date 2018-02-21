@@ -49,7 +49,15 @@ attr_accessor :path, :imported_music
 
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
-    input gets
+    artist gets
+    song_list_by_artist = Song.all.sort_by!{|song| song.name}
+    count = 1
+    song_list_by_artist.each do |song|
+      if song.artist == artist
+        puts "#{count}. #{song.name}"
+        count += 1
+      end
+    end
   end
 
 end
