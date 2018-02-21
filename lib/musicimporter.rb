@@ -11,7 +11,6 @@ class MusicImporter
   end
 
   def import
-    binding.pry
     file_import = self.files.each{ |file| Song.create_from_filename(file)}
   end
 end
