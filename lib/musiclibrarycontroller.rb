@@ -27,9 +27,7 @@ attr_accessor :path, :imported_music
 
   def list_songs
     binding.pry
-    test = Song.all.collect{|song| song.name}
-    puts test
-    #test.sort_by{|song| puts "#{song}"}
+    @imported_music.sort_by{|song| song.split(" - ")[1]}
   end
 
 end
