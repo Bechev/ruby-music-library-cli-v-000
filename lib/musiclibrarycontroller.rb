@@ -26,6 +26,8 @@ attr_accessor :path, :imported_music
   end
 
   def list_songs
+
+    Song.all
     #@imported_music.sort_by!{|song| song.split(" - ")[1]}
     #count = 1
     #@imported_music.each do |song| puts "#{count}. #{song}"
