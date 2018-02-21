@@ -35,7 +35,7 @@ attr_accessor :path, :imported_music
 
   def list_artists
     artist_list = Artist.all.sort_by{|artist| artist.name}
-    artist_list.each_with_index do |song,index|
+    artist_list.each_with_index do |artist,index|
       puts"#{index +1}. #{artist.name}"
     end
   end
