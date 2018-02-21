@@ -40,10 +40,10 @@ attr_accessor :path, :imported_music
     end
   end
 
-  def list_artists
-    artist_list = Artist.all.sort_by{|artist| artist.name}
-    artist_list.each_with_index do |artist,index|
-      puts"#{index +1}. #{artist.name}"
+  def list_genres
+    genre_list = Genre.all.sort_by{|genre| genre.name}
+    genre_list.each_with_index do |genre,index|
+      puts"#{index +1}. #{genre.name}"
     end
   end
 
