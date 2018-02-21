@@ -69,7 +69,7 @@ attr_accessor :path, :imported_music
     count = 1
     song_list_by_genre.each do |song|
       if song.genre.name == genre
-        puts "#{count}. #{genre.name}"
+        puts "#{count}. #{song.name}"
         count += 1
       end
     end
