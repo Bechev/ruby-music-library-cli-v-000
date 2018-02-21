@@ -1,9 +1,12 @@
+require 'pry'
 class MusicLibraryController
+
 attr_accessor :path, :imported_music
   def initialize(path = './db/mp3s')
     #@path = path
     music_importer = MusicImporter.new(path)
     @imported_music = music_importer.import
+    #binding.pry
   end
 
   def call
@@ -20,6 +23,11 @@ attr_accessor :path, :imported_music
     until user_input == 'exit'
       user_input = gets
     end
+  end
+
+  def list_songs
+    test = Song.all.collect{|song| song.name}
+    test.sort.each{|song| puts "#{song}"}
   end
 
 end
