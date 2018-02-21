@@ -29,7 +29,7 @@ attr_accessor :path, :imported_music
 
     Song.all.sort_by!{|song| song.split(" - ")[1]}
 
-    Song.all.each {}|song,index| puts "#{index +1}. #{song}"}
+    Song.all.each {|song,index| puts "#{index +1}. #{song}"}
     #@imported_music.sort_by!{|song| song.split(" - ")[1]}
     #count = 1
     #@imported_music.each do |song| puts "#{count}. #{song}"
