@@ -49,7 +49,7 @@ attr_accessor :path, :imported_music
 
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
-    gets artist
+    artist.gets 
     song_list_by_artist = Song.all.sort_by!{|song| song.name}
     binding.pry
     count = 1
