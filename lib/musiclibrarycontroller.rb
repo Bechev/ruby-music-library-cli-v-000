@@ -33,4 +33,7 @@ attr_accessor :path, :imported_music
     end
   end
 
+  def list_artists
+  end
+
 end
