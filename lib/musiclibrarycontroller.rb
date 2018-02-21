@@ -62,7 +62,7 @@ attr_accessor :path, :imported_music
   end
 
   def list_songs_by_genre
-    puts "Please enter the name of an genre:"
+    puts "Please enter the name of a genre:"
     genre = gets
     song_list_by_genre = Song.all.sort_by!{|song| song.name}
     #binding.pry
