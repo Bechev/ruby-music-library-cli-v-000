@@ -75,4 +75,8 @@ attr_accessor :path, :imported_music
     end
   end
 
+  def play_song
+    puts "Please choose a song:"
+    song = gets
+
 end
